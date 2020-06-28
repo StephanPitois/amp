@@ -1,0 +1,132 @@
+/* ================================================================ */
+/* SITCKY NAV */
+
+body.has-fixed-nav .display-if-has-fixed-nav {
+    display: block !important;
+}
+
+body.has-fixed-nav #amp-sticky-bar-anchor {
+    display: block !important;
+    margin-bottom: 90px;
+}
+
+/* ================================================================ */
+/* LIGHTBOX */
+
+.amp-shade {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1500;
+    cursor: zoom-out;
+}
+
+.amp-lightbox {
+    background-image: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: zoom-out;
+}
+
+.amp-event-thumbnail {
+    cursor: zoom-in;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+.amp-thumbnail img {
+	box-sizing: border-box;
+	margin: 0 5px 5px 0;
+    width: calc(33.33% - 5px);
+    max-width: 100px;
+	display: inline-block;
+}
+
+/* ================================================================ */
+/* ADMIN BAR */
+
+.admin-bar .fixed-top {
+    top: 46px;
+}
+
+@media (min-width: 784px) {
+    .admin-bar .fixed-top {
+        top: 32px;
+    }
+}
+
+/* ================================================================ */
+/* WP BOOSTRAP STARTER THEME  */
+
+.entry-meta,
+.post-navigation,
+.site-info .sep,
+.site-info .credits,
+.entry-footer {
+    display: none;
+}
+
+/* ================================================================ */
+/* devdmbootstrap4 THEME  */
+
+.dmbs-post-meta-header,
+.dmbs-post-footer {
+    display: none;
+}
+
+/* ================================================================ */
+/* Bootstrap 4 Wordpress Theme  */
+
+.site-info {
+    display: none;
+}
+
+/* ================================================================ */
+/* AMP People Search */
+
+#ampSearchProductionsInput,
+#ampSearchPeopleInput,
+#ampSearchEverything {
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 20px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+
+  #ampProductionsList,
+  #ampPeopleList {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #ampProductionsList li a,
+  #ampPeopleList li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }
+
+  #ampProductionsList li a:hover:not(.header),
+  #ampPeopleList li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+  }
