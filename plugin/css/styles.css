@@ -148,6 +148,5 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
   .covid-banner a:hover,
   .covid-banner a:active,
   .covid-banner a:focus {
-    color: #eee;
     text-decoration: underline;
   }
