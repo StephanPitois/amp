@@ -30,7 +30,7 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   var imgUrl = thumbUrl.split(/[?#]/)[0];
   var images = jQuery('[data-toggle="lightbox"]');
   var currentImage = images.filter(function(index) {
-    return images[index].getAttribute('href') === imgUrl;
+    return images[index].getAttribute('href') === thumbUrl;
   })[0];
   console.log("CURRENT: " + currentImage.getAttribute('href'));
   var lightboxUrl = imgUrl + '?w=1024&ssl=1'; // limit width
