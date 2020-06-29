@@ -16,9 +16,14 @@ AmpEvent.hidePhoto = function (url) {
   jQuery('.amp-shade').hide();
 };
 
+AmpEvent.closeLightbox = function () {
+  jQuery('.lightbox-wrapper').remove();
+};
+
 jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
-  jQuery(this).ekkoLightbox({ alwaysShowClose: true });
+  // jQuery(this).ekkoLightbox({ alwaysShowClose: true });
+  jQuery( "body" ).prepend( '<div class="lightbox-wrapper" onclick="AmpEvent.closeLightbox()"></div>' );
 });
 
 // ================================================================
