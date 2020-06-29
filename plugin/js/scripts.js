@@ -28,11 +28,11 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
   var thumbUrl = this.href;
   var imgUrl = thumbUrl.split(/[?#]/)[0];
-  var images = jQuery('[data-toggle="lightbox"]')
+  var images = jQuery('[data-toggle="lightbox"]');
   var currentImage = images.filter(function(index) {
-    return images[index].href === imgUrl;
+    return images[index].getAttribute('href') === imgUrl;
   })[0];
-  console.log(JSON.stringify(currentImage));
+  console.log("CURRENT: " + currentImage.getAttribute('href'));
   var lightboxUrl = imgUrl + '?w=1024&ssl=1'; // limit width
   var html = '<div class="lightbox-wrapper" onclick="AmpEvent.closeLightbox()">';
   html += '<img class="lightbox-inner" src="' + lightboxUrl + '" onclick="AmpEvent.loadImageByIndex()"/>';
