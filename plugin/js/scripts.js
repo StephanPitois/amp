@@ -28,7 +28,7 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
   var thumbUrl = this.href;
   var imgUrl = thumbUrl.split(/[?#]/)[0];
-  var images = jQuery('data-toggle="lightbox"')
+  var images = jQuery('[data-toggle="lightbox"]')
   var currentImage = images.filter(function(index) {
     return images[index].href === imgUrl;
   });
