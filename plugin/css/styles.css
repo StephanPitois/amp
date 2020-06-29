@@ -147,9 +147,3 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
   .covid-banner a:active, .covid-banner a:focus {
     color: #eee;
   }
-
-  @media (max-width: 1024px) {
-    .covid-banner {
-        margin-top: 50px;
-    }
-  }
