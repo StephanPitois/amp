@@ -143,6 +143,7 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
   .covid-banner > * {
     max-width: 1024px;
     margin: 0 auto;
+    text-align: center;
   }
 
   @media (max-width: 1024px) {
