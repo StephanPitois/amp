@@ -51,7 +51,7 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   console.log('nextIndex: ' + nextIndex);
 
   var lightboxUrl = this.href.split(/[?#]/)[0] + '?w=1024&ssl=1'; // limit width
-  var html = '<div class="lightbox-wrapper" onclick="AmpEvent.closeLightbox()">';
+  var html = '<div class="lightbox-wrapper" xonclick="AmpEvent.closeLightbox()">';
   html += '<img class="lightbox-inner" src="' + lightboxUrl + '" onclick="AmpEvent.loadImage(' + nextIndex + ')"/>';
   html += '</div>';
   jQuery("body").prepend(html);
