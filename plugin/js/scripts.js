@@ -25,7 +25,8 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   // jQuery(this).ekkoLightbox({ alwaysShowClose: true });
   var thumbUrl = this.href;
   var imgUrl = thumbUrl.split(/[?#]/)[0];
-  jQuery( "body" ).prepend( '<div class="lightbox-wrapper" style="background-image: url(' + imgUrl + ')" onclick="AmpEvent.closeLightbox()"></div>' );
+  var lightboxUrl = imgUrl + '?w=1024&ssl=1'; // limit width
+  jQuery( "body" ).prepend( '<div class="lightbox-wrapper" style="background-image: url(' + lightboxUrl + ')" onclick="AmpEvent.closeLightbox()"></div>' );
 });
 
 // ================================================================
