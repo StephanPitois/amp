@@ -23,7 +23,9 @@ AmpEvent.closeLightbox = function () {
 jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
   // jQuery(this).ekkoLightbox({ alwaysShowClose: true });
-  jQuery( "body" ).prepend( '<div class="lightbox-wrapper" onclick="AmpEvent.closeLightbox()"></div>' );
+  var thumbUrl = this.href;
+  var imgUrl = thumbUrl.split(/[?#]/)[0];
+  jQuery( "body" ).prepend( '<div class="lightbox-wrapper" style="background-image: url(' + imgUrl + ')" onclick="AmpEvent.closeLightbox()"></div>' );
 });
 
 // ================================================================
