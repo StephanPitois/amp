@@ -26,8 +26,7 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   var imgUrl = thumbUrl.split(/[?#]/)[0];
   var lightboxUrl = imgUrl + '?w=1024&ssl=1'; // limit width
   var html = '<div class="lightbox-wrapper" onclick="AmpEvent.closeLightbox()">';
-  html += '<div class="lightbox-inner" style="background-image: url(' + lightboxUrl + ')">';
-  html += '</div>';
+  html += '<img class="lightbox-inner" src="' + lightboxUrl + '" />';
   html += '</div>';
   jQuery("body").prepend(html);
 });
