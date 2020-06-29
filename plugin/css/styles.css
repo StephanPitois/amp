@@ -138,6 +138,7 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     position: relative;
     padding: .75em 5.5556%;
     text-align: center;
+    text-decoration: none;
   }
 
   .covid-banner a {
@@ -146,4 +147,5 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
 
   .covid-banner a:active, .covid-banner a:focus {
     color: #eee;
+    text-decoration: underline;
   }
