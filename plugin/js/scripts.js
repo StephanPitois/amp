@@ -29,12 +29,17 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   var thumbUrl = this.href;
   var imgUrl = thumbUrl.split(/[?#]/)[0];
   var images = jQuery('[data-toggle="lightbox"]');
-  console.log("Index: " + jQuery(this).index());
-  var currentImage = images.filter(function(index) {
-    return images[index].getAttribute('href') === thumbUrl;
-  })[0];
-  var currentHref = currentImage.getAttribute('href');
-  console.log("Current: " + currentHref);
+  var index = jQuery(this).index();
+  var prevIndex = index === 0 ? images.length - 1 : index - 1;
+  var nextIndex = index === images.length - 1 ? 0 : images.length + 1;
+  console.log('index: ' + index);
+  console.log('prevIndex: ' + prevIndex);
+  console.log('nextIndex: ' + nextIndex);
+  // var currentImage = images.filter(function(index) {
+  //   return images[index].getAttribute('href') === thumbUrl;
+  // })[0];
+  // var currentHref = currentImage.getAttribute('href');
+  // console.log("Current: " + currentHref);
   var lightboxUrl = imgUrl + '?w=1024&ssl=1'; // limit width
   var html = '<div class="lightbox-wrapper" onclick="AmpEvent.closeLightbox()">';
   html += '<img class="lightbox-inner" src="' + lightboxUrl + '" onclick="AmpEvent.loadImage()"/>';
