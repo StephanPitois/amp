@@ -140,8 +140,12 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     text-align: center;
   }
 
-  .covid-banner {
-    color: white;
+  .covid-banner a {
+    color: #fff;
+  }
+
+  .covid-banner a:active, .covid-banner a:focus {
+    color: #eee;
   }
 
   @media (max-width: 1024px) {
