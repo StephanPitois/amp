@@ -130,3 +130,11 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
   #ampPeopleList li a:hover:not(.header) {
     background-color: #eee; /* Add a hover effect to all links, except for headers */
   }
+
+  /* THEME */
+
+  .covid-banner {
+    background: #ba51ce;
+    color: white;
+    padding: .75em 5.5556%;
+  }
