@@ -168,4 +168,5 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
 
   .lightbox-inner {
     max-width: 1024px;
+    max-height: 100%;
   }
