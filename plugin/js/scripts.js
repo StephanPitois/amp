@@ -20,8 +20,8 @@ AmpEvent.closeLightbox = function () {
   jQuery('.lightbox-wrapper').remove();
 };
 
-AmpEvent.loadImageByIndex = function (index) {
-  console.log("loadImageByIndex not implemented");
+AmpEvent.loadImage = function () {
+  console.log("loadImage not implemented");
 };
 
 jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
@@ -29,13 +29,15 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   var thumbUrl = this.href;
   var imgUrl = thumbUrl.split(/[?#]/)[0];
   var images = jQuery('[data-toggle="lightbox"]');
+  console.log("Index: " + jQuery(this).index());
   var currentImage = images.filter(function(index) {
     return images[index].getAttribute('href') === thumbUrl;
   })[0];
-  console.log("CURRENT: " + currentImage.getAttribute('href'));
+  var currentHref = currentImage.getAttribute('href');
+  console.log("Current: " + currentHref);
   var lightboxUrl = imgUrl + '?w=1024&ssl=1'; // limit width
   var html = '<div class="lightbox-wrapper" onclick="AmpEvent.closeLightbox()">';
-  html += '<img class="lightbox-inner" src="' + lightboxUrl + '" onclick="AmpEvent.loadImageByIndex()"/>';
+  html += '<img class="lightbox-inner" src="' + lightboxUrl + '" onclick="AmpEvent.loadImage()"/>';
   html += '</div>';
   jQuery("body").prepend(html);
 });
