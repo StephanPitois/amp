@@ -136,5 +136,17 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
   .covid-banner {
     background: #ba51ce;
     color: white;
+    position: relative;
     padding: .75em 5.5556%;
+  }
+
+  .covid-banner > * {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    .covid-banner {
+        margin-top: 50px;
+    }
   }

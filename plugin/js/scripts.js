@@ -64,7 +64,7 @@ jQuery(document).ready(function () {
   /* THEME */
   var siteHeader = document.getElementById('site-header');
   var covidDiv = document.createElement('div');
-  covidDiv.innerHTML = 'COVID-19 Information';
+  covidDiv.innerHTML = 'Important COVID-19 Information >';
   covidDiv.className = 'covid-banner';
   siteHeader.parentNode.insertBefore(covidDiv, siteHeader);
 });
