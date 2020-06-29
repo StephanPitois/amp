@@ -20,13 +20,22 @@ AmpEvent.closeLightbox = function () {
   jQuery('.lightbox-wrapper').remove();
 };
 
+AmpEvent.loadImageByIndex = function (index) {
+  console.log("loadImageByIndex not implemented");
+};
+
 jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
   var thumbUrl = this.href;
   var imgUrl = thumbUrl.split(/[?#]/)[0];
+  var images = jQuery('data-toggle="lightbox"')
+  var currentImage = images.filter(function(index) {
+    return images[index].href === imgUrl;
+  });
+  console.log(JSON.stringify(currentImage));
   var lightboxUrl = imgUrl + '?w=1024&ssl=1'; // limit width
   var html = '<div class="lightbox-wrapper" onclick="AmpEvent.closeLightbox()">';
-  html += '<img class="lightbox-inner" src="' + lightboxUrl + '" />';
+  html += '<img class="lightbox-inner" src="' + lightboxUrl + '" onclick="AmpEvent.loadImageByIndex()"/>';
   html += '</div>';
   jQuery("body").prepend(html);
 });
