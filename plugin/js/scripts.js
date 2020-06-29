@@ -64,7 +64,7 @@ jQuery(document).ready(function () {
   /* THEME */
   var siteHeader = document.getElementById('site-header');
   var covidDiv = document.createElement('div');
-  covidDiv.innerHTML = '<a href="https://www.ameliamusicalplayhouse.com/covid-19-update/">Important COVID-19 Information <i class="fas fa-angle-right"></i></a>';
+  covidDiv.innerHTML = '<a href="https://www.ameliamusicalplayhouse.com/covid-19-update/">Important COVID-19 Information</a>';
   covidDiv.className = 'covid-banner';
   siteHeader.parentNode.insertBefore(covidDiv, siteHeader);
 });

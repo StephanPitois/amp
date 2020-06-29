@@ -135,15 +135,13 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
 
   .covid-banner {
     background: #ba51ce;
-    color: white;
     position: relative;
     padding: .75em 5.5556%;
+    text-align: center;
   }
 
-  .covid-banner > * {
-    max-width: 1024px;
-    margin: 0 auto;
-    text-align: center;
+  .covid-banner {
+    color: white;
   }
 
   @media (max-width: 1024px) {
