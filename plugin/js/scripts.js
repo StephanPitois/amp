@@ -33,9 +33,10 @@ AmpEvent.loadImage = function (index) {
 
   console.log("Current: " + currentHref);
   var lightboxUrl = currentHref.split(/[?#]/)[0] + '?w=1024&ssl=1'; // limit width
-  jQuery(".lightbox-inner")
-    .setAttribute('src', lightboxUrl)
-    .setAttribute('onclick', 'AmpEvent.loadImage(' + nextIndex + ')');
+  jQuery(".lightbox-inner").attr({
+    'src': lightboxUrl,
+    'onclick': 'AmpEvent.loadImage(' + nextIndex + ')'
+  });
 };
 
 jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
