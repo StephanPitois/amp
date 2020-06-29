@@ -31,7 +31,7 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   var images = jQuery('[data-toggle="lightbox"]')
   var currentImage = images.filter(function(index) {
     return images[index].href === imgUrl;
-  });
+  })[0];
   console.log(JSON.stringify(currentImage));
   var lightboxUrl = imgUrl + '?w=1024&ssl=1'; // limit width
   var html = '<div class="lightbox-wrapper" onclick="AmpEvent.closeLightbox()">';
