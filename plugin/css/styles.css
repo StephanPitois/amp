@@ -161,7 +161,11 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     z-index: 10000; /* Mobile menu is 9999 */
     /* background:rgba(51, 51, 51, .8); */
     background: #000;
+  }
+
+  .lightbox-inner {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+    max-width: 1024px;
   }

@@ -22,11 +22,14 @@ AmpEvent.closeLightbox = function () {
 
 jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
-  // jQuery(this).ekkoLightbox({ alwaysShowClose: true });
   var thumbUrl = this.href;
   var imgUrl = thumbUrl.split(/[?#]/)[0];
   var lightboxUrl = imgUrl + '?w=1024&ssl=1'; // limit width
-  jQuery( "body" ).prepend( '<div class="lightbox-wrapper" style="background-image: url(' + lightboxUrl + ')" onclick="AmpEvent.closeLightbox()"></div>' );
+  var html = '<div class="lightbox-wrapper" onclick="AmpEvent.closeLightbox()">';
+  html += '<div class="lightbox-inner" style="background-image: url(' + lightboxUrl + ')">';
+  html += '</div>';
+  html += '</div>';
+  jQuery("body").prepend(html);
 });
 
 // ================================================================
