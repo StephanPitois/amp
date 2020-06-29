@@ -60,4 +60,11 @@ jQuery(document).ready(function () {
   if (jQuery('#ampSearchPeopleInput').val()) {
     ampSearchPeople();
   }
+
+  /* THEME */
+  var siteHeader = document.getElementById('site-header');
+  var covidDiv = document.createElement('div');
+  covidDiv.innerHTML = 'COVID-19 Information';
+  covidDiv.className = 'covid-banner';
+  siteHeader.parentNode.insertBefore(covidDiv, siteHeader);
 });
