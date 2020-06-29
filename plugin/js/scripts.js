@@ -31,7 +31,7 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   var images = jQuery('[data-toggle="lightbox"]');
   var index = jQuery(this).index();
   var prevIndex = index === 0 ? images.length - 1 : index - 1;
-  var nextIndex = index === images.length - 1 ? 0 : images.length + 1;
+  var nextIndex = index === images.length - 1 ? 0 : index + 1;
   console.log('index: ' + index);
   console.log('prevIndex: ' + prevIndex);
   console.log('nextIndex: ' + nextIndex);
