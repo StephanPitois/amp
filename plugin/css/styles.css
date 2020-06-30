@@ -248,6 +248,10 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     cursor: pointer;
   }
 
+  ol.amp-list {
+    list-style-position: inside;
+  }
+
   .amp-list li {
     border: 1px solid #ddd;
     border-bottom: none;
