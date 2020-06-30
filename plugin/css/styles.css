@@ -166,16 +166,23 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     align-items: center;
   }
 
+  @media (max-width: 1024px) {
+    .lightbox-inner {
+      max-width: 100%;
+      max-height: calc(100% - 48px);
+    }
+  }
+
   .lightbox-inner {
     max-width: 1024px;
-    max-height: 100%;
+    max-height: calc(100% - 48px);
   }
 
   .lightbox-prev ,
   .lightbox-next {
     position: fixed;
     top: 48px;
-    bottom: 48px;
+    bottom: 0;
   }
 
   .lightbox-prev {
@@ -197,4 +204,13 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
 
   body.lightbox-visible {
     overflow: hidden;
+  }
+
+  .lightbox-top {
+    text-align: right;
+    position: fixed;
+    top: 0;
+    bottom: 48px;
+    left: 0;
+    right: 0;
   }
