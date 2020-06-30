@@ -181,7 +181,7 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
   .lightbox-next {
     position: fixed;
     top: 48px;
-    bottom: 0;
+    bottom: 48px;
   }
 
   .lightbox-prev {
