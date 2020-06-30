@@ -222,7 +222,7 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
 
   .lightbox-top-left,
   .lightbox-top-right {
-      position: fixed;
+    position: fixed;
     top: 0;
     height: 48px;
     color: #fff;
