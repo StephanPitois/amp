@@ -32,9 +32,14 @@ AmpEvent.getImageInfo = function (index) {
 
 AmpEvent.loadImage = function (index) {
   var imageInfo = AmpEvent.getImageInfo(index);
-  jQuery(".lightbox-inner").attr({
-    'src': imageInfo.lightboxUrl,
+  jQuery(".lightbox-prev").attr({
+    'onclick': 'AmpEvent.loadImage(' + imageInfo.prevIndex + ')'
+  });
+  jQuery(".lightbox-next").attr({
     'onclick': 'AmpEvent.loadImage(' + imageInfo.nextIndex + ')'
+  });
+  jQuery(".lightbox-inner").attr({
+    'src': imageInfo.lightboxUrl
   });
 };
 
