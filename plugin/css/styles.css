@@ -248,8 +248,8 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     cursor: pointer;
   }
 
-  .amp-list li:first-child {
-    border: 1px solid #eee;
+  .amp-list li {
+    border: 1px solid #ddd;
   }
 
   .amp-list li:first-child {
