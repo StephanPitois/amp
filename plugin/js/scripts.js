@@ -20,39 +20,30 @@ AmpEvent.closeLightbox = function () {
   jQuery('.lightbox-wrapper').remove();
 };
 
-AmpEvent.loadImage = function (index) {
+AmpEvent.getImageInfo = function (index) {
   var images = jQuery('[data-toggle="lightbox"]');
-  var prevIndex = index === 0 ? images.length - 1 : index - 1;
-  var nextIndex = index === images.length - 1 ? 0 : index + 1;
-  console.log('index: ' + index);
-  console.log('prevIndex: ' + prevIndex);
-  console.log('nextIndex: ' + nextIndex);
+  return {
+    index: index,
+    prevIndex: index === 0 ? images.length - 1 : index - 1,
+    nextIndex: index === images.length - 1 ? 0 : index + 1,
+    lightboxUrl: images.get(index).getAttribute('href').split(/[?#]/)[0] + '?w=1024&ssl=1' // limit width
+  };
+}
 
-  var currentImage = images.get(index);
-  var currentHref = currentImage.getAttribute('href');
-
-  console.log("Current: " + currentHref);
-  var lightboxUrl = currentHref.split(/[?#]/)[0] + '?w=1024&ssl=1'; // limit width
+AmpEvent.loadImage = function (index) {
+  var imageInfo = AmpEvent.getImageInfo(index);
   jQuery(".lightbox-inner").attr({
-    'src': lightboxUrl,
-    'onclick': 'AmpEvent.loadImage(' + nextIndex + ')'
+    'src': imageInfo.lightboxUrl,
+    'onclick': 'AmpEvent.loadImage(' + imageInfo.nextIndex + ')'
   });
 };
 
 jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
   var index = jQuery(this).index();
-
-  var images = jQuery('[data-toggle="lightbox"]');
-  var prevIndex = index === 0 ? images.length - 1 : index - 1;
-  var nextIndex = index === images.length - 1 ? 0 : index + 1;
-  console.log('index: ' + index);
-  console.log('prevIndex: ' + prevIndex);
-  console.log('nextIndex: ' + nextIndex);
-
-  var lightboxUrl = this.href.split(/[?#]/)[0] + '?w=1024&ssl=1'; // limit width
+  var imageInfo = AmpEvent.getImageInfo(index);
   var html = '<div class="lightbox-wrapper" xonclick="AmpEvent.closeLightbox()">';
-  html += '<img class="lightbox-inner" src="' + lightboxUrl + '" onclick="AmpEvent.loadImage(' + nextIndex + ')"/>';
+  html += '<img class="lightbox-inner" src="' + imageInfo.lightboxUrl + '" onclick="AmpEvent.loadImage(' + imageInfo.nextIndex + ')"/>';
   html += '</div>';
   jQuery("body").prepend(html);
 });
