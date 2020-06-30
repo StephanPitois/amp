@@ -186,6 +186,7 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     color: #fff;
     display: flex;
     align-items: center;
+    justify-content: space-around;
   }
 
   .lightbox-prev > div ,
