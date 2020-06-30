@@ -49,7 +49,7 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   var index = jQuery(this).index();
   var imageInfo = AmpEvent.getImageInfo(index);
   var html = '<div class="lightbox-wrapper" xonclick="AmpEvent.closeLightbox()">';
-  html += '<div class="lightbox-top" onclick="AmpEvent.closeLightbox()">Close</div>'
+  html += '<div class="lightbox-top" onclick="AmpEvent.closeLightbox()"><i class="fas fa-times"></i></div>'
   html += '<div class="lightbox-prev" onclick="AmpEvent.loadImage(' + imageInfo.prevIndex + ')"><div>&lsaquo;</div></div>'
   html += '<div class="lightbox-next" onclick="AmpEvent.loadImage(' + imageInfo.nextIndex + ')"><div>&rsaquo;</div></div>'
   html += '<img class="lightbox-inner" src="' + imageInfo.lightboxUrl + '" />';

@@ -191,8 +191,8 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
 
   .lightbox-prev > div ,
   .lightbox-next > div {
-    width: 90%;
-    font-size: 80px;
+    width: 95%;
+    font-size: 60px;
   }
 
   .lightbox-prev {
@@ -221,7 +221,7 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
   }
 
   .lightbox-top {
-    text-align: center;
+    text-align: right;
     position: fixed;
     top: 0;
     height: 48px;
