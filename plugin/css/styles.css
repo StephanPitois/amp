@@ -166,16 +166,15 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     align-items: center;
   }
 
-  @media (max-width: 1024px) {
-    .lightbox-inner {
-      max-width: 100%;
-      max-height: calc(100% - 48px);
-    }
+  .lightbox-inner {
+    max-width: 100%;
+    max-height: calc(100% - 96px);
   }
 
-  .lightbox-inner {
-    max-width: 1024px;
-    max-height: calc(100% - 48px);
+  @media (min-width: 1025px) {
+    .lightbox-inner {
+      max-width: 1024px;
+    }
   }
 
   .lightbox-prev ,
@@ -218,4 +217,5 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     padding: 10px 20px;
     font-weight: 400;
     cursor: pointer;
+    background: #000;
   }
