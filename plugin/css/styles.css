@@ -220,17 +220,30 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     overflow: hidden;
   }
 
-  .lightbox-top {
-    text-align: right;
-    position: fixed;
+  .lightbox-top-left,
+  .lightbox-top-right {
+      position: fixed;
     top: 0;
     height: 48px;
-    left: 0;
-    right: 0;
     color: #fff;
+    background: #000;
+  }
+
+  .lightbox-top-left {
+    text-align: left;
+    left: 0;
+    right: 50%;
+    font-size: 15px;
+    padding: 10px 20px;
+    font-weight: 400;
+  }
+
+  .lightbox-top-right {
+    text-align: right;
+    left: 50%;
+    right: 0;
     font-size: 20px;
     padding: 10px 20px;
     font-weight: 400;
     cursor: pointer;
-    background: #000;
   }

@@ -51,7 +51,8 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   var imageInfo = AmpEvent.getImageInfo(index);
   var pageInfo = (imageInfo.count > 1) ? (index + 1) + ' / ' + imageInfo.count : '';
   var html = '<div class="lightbox-wrapper" xonclick="AmpEvent.closeLightbox()">';
-  html += '<div class="lightbox-top" onclick="AmpEvent.closeLightbox()">' + pageInfo + '<i class="fas fa-times"></i></div>'
+  html += '<div class="lightbox-top-left>' + pageInfo + '</div>'
+  html += '<div class="lightbox-top-right" onclick="AmpEvent.closeLightbox()"><i class="fas fa-times"></i></div>'
   html += '<div class="lightbox-prev" onclick="AmpEvent.loadImage(' + imageInfo.prevIndex + ')"><div>&lsaquo;</div></div>'
   html += '<div class="lightbox-next" onclick="AmpEvent.loadImage(' + imageInfo.nextIndex + ')"><div>&rsaquo;</div></div>'
   html += '<img class="lightbox-inner" src="' + imageInfo.lightboxUrl + '" />';
