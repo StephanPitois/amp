@@ -247,3 +247,17 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     font-weight: 400;
     cursor: pointer;
   }
+
+  .amp-list li:first-child {
+    border: 1px solid #eee;
+  }
+
+  .amp-list li:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .amp-list li:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
