@@ -273,6 +273,12 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
 
 
   @media (max-width: 575px) {
+    .single .site-header {
+      display: none;
+    }
+    .single .primary-container {
+      margin-top: 0;
+    }
     .single .primary-container {
       padding: 0;
     }
