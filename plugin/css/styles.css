@@ -210,7 +210,11 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     text-align: right;
     position: fixed;
     top: 0;
-    bottom: 48px;
+    height: 48px;
     left: 0;
     right: 0;
+    color: #fff;
+    font-size: 30px;
+    padding-right: 10px;
+    font-weight: 400;
   }
