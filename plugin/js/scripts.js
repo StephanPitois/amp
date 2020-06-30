@@ -28,12 +28,13 @@ AmpEvent.getImageInfo = function (index) {
     prevIndex: index === 0 ? images.length - 1 : index - 1,
     nextIndex: index === images.length - 1 ? 0 : index + 1,
     lightboxUrl: images.get(index).getAttribute('href').split(/[?#]/)[0] + '?w=1024&ssl=1', // limit width
-    count: images.length
+    pageInfo: (images.length > 1) ? (index + 1) + ' / ' + images.length : ''
   };
 }
 
 AmpEvent.loadImage = function (index) {
   var imageInfo = AmpEvent.getImageInfo(index);
+  jQuery(".lightbox-top-left").html(imageInfo.pageInfo);
   jQuery(".lightbox-prev").attr({
     'onclick': 'AmpEvent.loadImage(' + imageInfo.prevIndex + ')'
   });
@@ -49,9 +50,8 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
   var index = jQuery(this).index();
   var imageInfo = AmpEvent.getImageInfo(index);
-  var pageInfo = (imageInfo.count > 1) ? (index + 1) + ' / ' + imageInfo.count : '';
   var html = '<div class="lightbox-wrapper" xonclick="AmpEvent.closeLightbox()">';
-  html += '<div class="lightbox-top-left">' + pageInfo + '</div>'
+  html += '<div class="lightbox-top-left">' + imageInfo.pageInfo + '</div>'
   html += '<div class="lightbox-top-right" onclick="AmpEvent.closeLightbox()"><i class="fas fa-times"></i></div>'
   html += '<div class="lightbox-prev" onclick="AmpEvent.loadImage(' + imageInfo.prevIndex + ')"><div>&lsaquo;</div></div>'
   html += '<div class="lightbox-next" onclick="AmpEvent.loadImage(' + imageInfo.nextIndex + ')"><div>&rsaquo;</div></div>'
