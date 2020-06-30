@@ -171,18 +171,26 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     max-height: 100%;
   }
 
- .lightbox-prev {
-  position: fixed;
-  top: 48px;
-  bottom: 48px;
-  left: 0;
-  right: 50%;
- }
+  .lightbox-prev ,
+  .lightbox-next {
+    position: fixed;
+    top: 48px;
+    bottom: 48px;
+  }
 
- .lightbox-next {
-  position: fixed;
-  top: 48px;
-  bottom: 48px;
-  left: 50%;
-  right: 0;
-}
+  .lightbox-prev {
+    left: 0;
+    right: 50%;
+  }
+
+  .lightbox-next {
+    left: 50%;
+    right: 0;
+  }
+
+  .lightbox-prev:focus,
+  .lightbox-prev:active,
+  .lightbox-next:focus,
+  .lightbox-next:active {
+    background: rgba(255, 255, 255, 0.25);
+  }
