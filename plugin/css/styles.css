@@ -250,6 +250,8 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
 
   .amp-list li {
     border: 1px solid #ddd;
+    border-bottom: none;
+    padding: 10px;
   }
 
   .amp-list li:first-child {
@@ -258,6 +260,7 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
   }
 
   .amp-list li:last-child {
+    border-bottom: 1px solid #ddd;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
   }
