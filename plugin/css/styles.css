@@ -187,11 +187,13 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
   .lightbox-prev {
     left: 0;
     right: 50%;
+    cursor: w-resize;
   }
 
   .lightbox-next {
     left: 50%;
     right: 0;
+    cursor: e-resize;
   }
 
   .lightbox-prev:focus,
