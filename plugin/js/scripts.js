@@ -18,6 +18,7 @@ AmpEvent.hidePhoto = function (url) {
 
 AmpEvent.closeLightbox = function () {
   jQuery('.lightbox-wrapper').remove();
+  jQuery("body").removeClass("lightbox-visible");
 };
 
 AmpEvent.getImageInfo = function (index) {
@@ -53,6 +54,7 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   html += '<img class="lightbox-inner" src="' + imageInfo.lightboxUrl + '" />';
   html += '</div>';
   jQuery("body").prepend(html);
+  jQuery("body").addClass("lightbox-visible");
 });
 
 // ================================================================

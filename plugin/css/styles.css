@@ -194,3 +194,7 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
   .lightbox-next:active {
     background: rgba(255, 255, 255, 0.25);
   }
+
+  body.lightbox-visible {
+    overflow: hidden;
+  }
