@@ -214,7 +214,7 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     left: 0;
     right: 0;
     color: #fff;
-    font-size: 30px;
-    padding-right: 10px;
+    font-size: 20px;
+    padding: 10px;
     font-weight: 400;
   }
