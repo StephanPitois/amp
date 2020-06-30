@@ -209,12 +209,12 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     text-align: right;
   }
 
-  .lightbox-prev:focus,
+  /* .lightbox-prev:focus,
   .lightbox-prev:active,
   .lightbox-next:focus,
   .lightbox-next:active {
     background: rgba(255, 255, 255, 0.25);
-  }
+  } */
 
   body.lightbox-visible {
     overflow: hidden;
