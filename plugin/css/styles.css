@@ -170,3 +170,21 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     max-width: 1024px;
     max-height: 100%;
   }
+
+ .lightbox-prev {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  border: 1px solid red;
+ }
+
+ .lightbox-next {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  border: 1px solid yellowgreen;
+}

@@ -43,6 +43,7 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   var index = jQuery(this).index();
   var imageInfo = AmpEvent.getImageInfo(index);
   var html = '<div class="lightbox-wrapper" xonclick="AmpEvent.closeLightbox()">';
+  html += '<div class="lightbox-prev"></div><div class="lightbox-next"></div>'
   html += '<img class="lightbox-inner" src="' + imageInfo.lightboxUrl + '" onclick="AmpEvent.loadImage(' + imageInfo.nextIndex + ')"/>';
   html += '</div>';
   jQuery("body").prepend(html);
