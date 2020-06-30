@@ -50,8 +50,8 @@ jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
   var imageInfo = AmpEvent.getImageInfo(index);
   var html = '<div class="lightbox-wrapper" xonclick="AmpEvent.closeLightbox()">';
   html += '<div class="lightbox-top" onclick="AmpEvent.closeLightbox()">Close</div>'
-  html += '<div class="lightbox-prev" onclick="AmpEvent.loadImage(' + imageInfo.prevIndex + ')"></div>'
-  html += '<div class="lightbox-next" onclick="AmpEvent.loadImage(' + imageInfo.nextIndex + ')"></div>'
+  html += '<div class="lightbox-prev" onclick="AmpEvent.loadImage(' + imageInfo.prevIndex + ')"><div>&lsaquo;</div></div>'
+  html += '<div class="lightbox-next" onclick="AmpEvent.loadImage(' + imageInfo.nextIndex + ')"><div>&rsaquo;</div></div>'
   html += '<img class="lightbox-inner" src="' + imageInfo.lightboxUrl + '" />';
   html += '</div>';
   jQuery("body").prepend(html);

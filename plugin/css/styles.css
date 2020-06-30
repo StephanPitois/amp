@@ -182,18 +182,30 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     position: fixed;
     top: 48px;
     bottom: 48px;
+    display: flex;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  .lightbox-prev > div ,
+  .lightbox-next > div {
+    width: 90%;
+    font-size: 80px;
   }
 
   .lightbox-prev {
     left: 0;
     right: 50%;
     cursor: w-resize;
+    text-align: left;
   }
 
   .lightbox-next {
     left: 50%;
     right: 0;
     cursor: e-resize;
+    text-align: right;
   }
 
   .lightbox-prev:focus,
@@ -208,7 +220,7 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
   }
 
   .lightbox-top {
-    text-align: right;
+    text-align: center;
     position: fixed;
     top: 0;
     height: 48px;
