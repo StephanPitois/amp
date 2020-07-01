@@ -285,6 +285,9 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     .single .site-footer {
       margin-top: 0;
     }
+    .sidebar-primary {
+      display: none;
+    }
   }
 
   body.blog .entry > article {
