@@ -290,7 +290,7 @@ body.has-fixed-nav #amp-sticky-bar-anchor {
     }
   }
 
-    body.blog .entry > article {
+  .body.blog .entry > article {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
